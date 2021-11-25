@@ -31,7 +31,7 @@ namespace PW11
 
         private void Findab_Click(object sender, RoutedEventArgs e)
         {
-            Regex findab = new Regex("(ab)+");//Задаем параметры поиска, создаем новое регулярное выражение
+            Regex findab = new Regex("(ab)+\\b");//Задаем параметры поиска, создаем новое регулярное выражение
             string firstmainstring = FirstMainString.Text;//Извлечение данной строки из элемента интерфейса TextBox
             MatchCollection result = findab.Matches(firstmainstring);//Коллекционируем найденное для последующего отображения как результата проделанной работы
             Countab.Text = result.Count.ToString();//Вывод количества найденных ab
